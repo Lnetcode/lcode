@@ -1,0 +1,14 @@
+<?php
+// Récupération des données saisies
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+
+// Enregistrement des données dans un fichier de texte
+$fichier = fopen("data.txt", 'a');
+fwrite($fichier, "Nom : $nom\n");
+fwrite($fichier, "Prénom : $prenom\n\n");
+fclose($fichier);
+
+// Affichage d'une confirmation
+echo "Données enregistrées avec succès!";
+?>
